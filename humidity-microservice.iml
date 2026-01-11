@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="humidity-microservice" external.linked.project.path="$MODULE_DIR$/humidity-microservice" external.root.project.path="$MODULE_DIR$/humidity-microservice" external.system.id="GRADLE" external.system.module.group="org.example" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/humidity-microservice">
+      <excludeFolder url="file://$MODULE_DIR$/humidity-microservice/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/humidity-microservice/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
