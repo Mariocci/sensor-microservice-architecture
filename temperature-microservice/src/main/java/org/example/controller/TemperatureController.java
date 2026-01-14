@@ -18,7 +18,7 @@ public class TemperatureController {
     }
 
     @GetMapping
-    public Map<String, Object> getTemperature() {
+    public Map<String, Object> read() {
         return Map.of(
                 "name", "Temperature",
                 "unit", "C",

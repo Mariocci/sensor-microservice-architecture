@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: humidity-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: humidity
+  template:
+    metadata:
+      labels:
+        app: humidity
+    spec:
+      containers:
+        - name: humidity
+          image: humidity-microservice:1.0-SNAPSHOT
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: readings-volume
+              mountPath: /config
+      volumes:
+        - name: readings-volume
+          configMap:
+            name: humidity-readings
