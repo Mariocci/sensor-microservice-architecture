@@ -1,6 +1,5 @@
 package org.example.controller;
 
-import org.example.config.AggregatorProperties;
 import org.example.service.AggregationService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,19 +13,13 @@ import java.util.Map;
 public class AggregationController {
 
     private final AggregationService service;
-    private final AggregatorProperties props;
 
-    public AggregationController(AggregationService service, AggregatorProperties props) {
+    public AggregationController(AggregationService service) {
         this.service = service;
-        this.props = props;
     }
 
     @GetMapping
     public List<Map<String, Object>> aggregate() {
         return service.aggregate();
-    }
-    @GetMapping("/props")
-    public AggregatorProperties getProps() {
-        return props;
     }
 }

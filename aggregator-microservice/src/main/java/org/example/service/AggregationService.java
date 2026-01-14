@@ -1,13 +1,11 @@
 package org.example.service;
 
-import jakarta.annotation.PostConstruct;
 import org.example.config.AggregatorProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Map;
-
 
 @Service
 public class AggregationService {
@@ -17,13 +15,6 @@ public class AggregationService {
 
     public AggregationService(AggregatorProperties props) {
         this.props = props;
-    }
-
-    @PostConstruct
-    public void init() {
-        System.out.println("Temperature URL: " + props.getTemperatureUrl());
-        System.out.println("Humidity URL: " + props.getHumidityUrl());
-        System.out.println("Temperature Unit: " + props.getTemperatureUnit());
     }
 
     public List<Map<String, Object>> aggregate() {
